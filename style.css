@@ -964,4 +964,134 @@ section {
 
 .cert-close:hover {
   color: #7dd3fc;
+
+}
+
+@media (max-width: 768px) {
+
+  .nav-container {
+    padding: 14px 20px;
+  }
+
+  nav a {
+    margin-left: 16px;
+    font-size: 0.85rem;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .hero {
+    padding: 120px 20px 80px;
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
+    line-height: 1.1;
+  }
+
+  .hero-greeting {
+    font-size: 1.2rem;
+  }
+
+  .hero-role {
+    font-size: 1.2rem;
+    min-height: 28px;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  .hero-actions .btn {
+    display: inline-block;
+    margin: 8px 6px;
+    padding: 10px 24px;
+    font-size: 0.85rem;
+  }
+
+  section {
+    padding: 70px 18px;
+  }
+
+  .section-title,
+  .section-heading {
+    font-size: 2.1rem;
+    margin-bottom: 40px;
+  }
+
+  .about {
+    padding: 90px 18px;
+  }
+
+  .about-card {
+    padding: 26px;
+  }
+
+  .about-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-card {
+    padding: 20px;
+  }
+
+  .contact {
+    padding-top: 60px;
+  }
+
+  .contact-grid {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .contact-card {
+    min-width: 100%;
+    padding: 22px;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+
+  .scroll-indicator {
+    bottom: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .section-title,
+  .section-heading {
+    font-size: 1.9rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 260px;
+  }
 }
