@@ -1099,4 +1099,23 @@ section {
     max-width: 260px;
   }
 }
+.contact-cta {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap; 
+}
 
+@media (max-width: 600px) {
+  .contact-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-cta .btn {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+  }
+}
