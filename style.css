@@ -982,6 +982,10 @@ section {
     font-size: 1.4rem;
   }
 
+   nav {
+    display: none;
+  }
+
   .hero {
     padding: 120px 20px 80px;
   }
@@ -1095,3 +1099,4 @@ section {
     max-width: 260px;
   }
 }
+
