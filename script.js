@@ -1,7 +1,6 @@
 const roles = [
   "Python Developer",
-  "Machine Learning / Data Science",
-  "Full-Stack Developer"
+  "Full-Stack Software Developer"
 ];
 
 let roleIndex = 0;
