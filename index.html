@@ -1,625 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muskan | Data Science Portfolio</title>
-
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Muskan — Portfolio</title>
+<meta name="description" content="Muskan — Python developer building ML-powered web applications."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="nav-container">
-      <div class="logo">Muskan</div>
+<div id="cur"></div>
+<div id="cur-r"></div>
 
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">Muskan<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="Muskan_Resume_.pdf" target="_blank" class="nav-cv">Résumé ↗</a>
+  <button class="nav-ham" id="navHam" aria-label="Menu"><span></span><span></span></button>
+</nav>
 
-    </div>
-  </header>
-
-  <section id="home" class="hero">
-    <div class="hero-bg"></div>
-
-    <div class="hero-content">
-      <p class="hero-greeting">Hello, I’m</p>
-
-      <h1 class="hero-title">
-        <span class="gradient-name">Muskan</span>
-      </h1>
-
-      <h2 class="hero-role">
-        <span class="typewriter"></span>
-      </h2>
-
-      <p class="hero-subtext">
-        Building real-world web applications using Python and Machine Learning.
-      </p>
-
-      <div class="hero-actions">
-
-  <button
-    class="btn primary view-resume-btn" data-resume="Resume-Muskan.pdf">
-    <i class="bx bx-file"></i>
-    View Resume
-  </button>
-
-  <a href="https://github.com/poonia-muskan"
-     target="_blank"
-     class="btn ghost">
-    <i class="bx bxl-github"></i>
-    GitHub
-  </a>
-
-  <a href="#contact" class="btn ghost">
-    <i class="bx bx-envelope"></i>
-    Contact
-  </a>
-
+<!-- MOBILE NAV -->
+<div id="mob-nav">
+  <button class="mob-close" id="mobClose">✕ close</button>
+  <a href="#about" class="mob-link">About</a>
+  <a href="#projects" class="mob-link">Work</a>
+  <a href="#skills" class="mob-link">Stack</a>
+  <a href="#certifications" class="mob-link">Certs</a>
+  <a href="#education" class="mob-link">Education</a>
+  <a href="#contact" class="mob-link">Contact</a>
 </div>
 
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge rv"><span class="badge-dot"></span>B.Tech Computer Science (Data Science)</div>
+    <h1 class="hero-name rv d1">Mus<span class="glow">kan</span></h1>
+    <p class="hero-role rv d2">Full-Stack (Python) Developer</p>
+    <p class="hero-desc rv d3">
+      I like building things that are useful. Whether it's a <strong>healthcare application</strong>, a <strong>mental wellness platform</strong>, or a tool that saves people time, I enjoy <strong>turning ideas into working software</strong> and learning something new along the way.</p>
+    <div class="hero-ctas rv d4">
+      <a href="#projects" class="cta-primary">View my work</a>
+      <a href="https://github.com/poonia-muskan" target="_blank" class="cta-ghost">GitHub ↗</a>
+      <a href="mailto:pooniamuskan4@gmail.com" class="cta-ghost">Email ↗</a>
     </div>
-
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </section>
-
-<div class="scroll-indicator">
-  <div class="mouse">
-    <span></span>
   </div>
-  <p>Scroll</p>
+  <div class="hero-chips">
+    <div class="chip rv d1"><div class="chip-n">7+</div><div class="chip-l">Projects Live</div></div>
+    <div class="chip rv d2"><div class="chip-n">8.90</div><div class="chip-l">CGPA / 10</div></div>
+    <div class="chip rv d3"><div class="chip-n">8</div><div class="chip-l">Certifications</div></div>
+    <div class="chip rv d4"><div class="chip-n">SIH</div><div class="chip-l">Team Lead</div></div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <span>SCROLL</span>
 </div>
-
-<section id="about" class="about">
-  <div class="about-container">
-
-    <div class="about-text">
-      <h2 class="section-heading">
-        About <span>Me</span>
-      </h2>
-
-      <p>
-        I’m Muskan, a final-year B.Tech student in Computer Science (Data Science) who enjoys building real-world, data-driven applications. I like working on problems where technology, logic, and user experience come together to create something useful.
-      </p>
-
-      <p>
-        I have hands-on experience with Python, web development, and machine learning, and I’ve built and deployed several full-stack applications using Flask and Streamlit. My projects range from mental wellness platforms to ML-based healthcare tools and audio processing applications.
-      </p>
-
-      <p>
-        I’m especially interested in applied machine learning and backend development, and I enjoy building systems that solve practical problems. I’m currently looking for opportunities where I can learn, grow, and contribute while strengthening my skills as a data-driven software developer.
-      </p>
-    </div>
-
-    <div class="about-card refined-card">
-
-  <div class="about-row">
-    <span class="about-label">Focus</span>
-    <span class="about-value">
-      Web Application Development · Python & Backend Engineering
-    </span>
-  </div>
-
-  <div class="about-row">
-    <span class="about-label">Domains</span>
-    <span class="about-value">
-      Data Science · Applied Machine Learning · Full-Stack Python Development
-    </span>
-  </div>
-
-  <div class="about-row">
-    <span class="about-label">Experience</span>
-    <span class="about-value">
-      Building and deploying end-to-end Machine Learning–powered web applications
-    </span>
-  </div>
-
-  <div class="about-divider"></div>
-
-  <div class="about-build">
-    <span>I build</span>
-    <p>
-      Production-ready, data-driven web applications and intelligent backend systems using Python and Machine Learning.
-    </p>
-  </div>
-
-  <div class="about-stats-grid">
-    <div class="about-stat">
-      <h3>7+</h3>
-      <p>Deployed Projects</p>
-    </div>
-
-    <div class="about-stat">
-      <h3>ML + Web</h3>
-      <p>Full-Stack Systems</p>
-    </div>
-
-    <div class="about-stat">
-      <h3>Python</h3>
-      <p>Primary Programming Language</p>
-    </div>
-
-    <div class="about-stat">
-      <h3>Flask</h3>
-      <p>Backend Framework</p>
-    </div>
-  </div>
-
-</div>
-
-  </div>
 </section>
 
-<section id="projects" class="projects">
-  <div class="projects-container">
-
-    <h2 class="section-heading">
-      Selected <span>Projects</span>
-    </h2>
-
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <div class="project-header">
-          <h3>ZenBot</h3>
-          <span class="project-type">ML + Full-Stack Web Application</span>
-        </div>
-        <p>
-          A digital mental wellness platform enabling users to track moods,
-          maintain private journals, and reflect on their mental health journey
-          in a secure environment.
-        </p>
-        <div class="project-tech">
-          <span>Flask</span><span>Python</span><span>SQLAlchemy</span><span>Google OAuth</span><span>Render</span>
-        </div>
-        <a href="https://zenbot-3mjb.onrender.com" target="_blank">
-          View Live →
+<!-- ABOUT -->
+<section id="about" class="sec">
+  <div class="sec-tag rv">01 · About</div>
+  <h2 class="sec-h rv d1">About <em>me.</em></h2>
+  <div class="about-grid">
+    <div class="rv d1">
+      <div class="about-text">
+        <p>I'm a recent <strong>B.Tech CSE (Data Science) graduate</strong> who enjoys turning ideas into real, usable software. Most of my work revolves around Python, backend development, machine learning, and building applications that solve practical problems. Rather than stopping at models or prototypes, I focus on creating complete products from <strong>development to deployment</strong> and <strong>user experience</strong>. <br>I've built projects in healthcare, mental wellness, document processing, and accessibility, combining data-driven solutions with clean and functional interfaces. <br>I'm currently looking for opportunities where I can continue learning, contribute to meaningful products, and grow as a <strong>software developer</strong>.</p>
+      </div>
+      <div class="about-social-list">
+        <a href="https://github.com/poonia-muskan" target="_blank" class="soc-row">
+          <span class="soc-lbl">GitHub</span><span class="soc-name">github.com/poonia-muskan</span><span class="soc-arr">↗</span>
+        </a>
+        <a href="https://linkedin.com/in/muskan2004" target="_blank" class="soc-row">
+          <span class="soc-lbl">LinkedIn</span><span class="soc-name">linkedin.com/in/muskan2004</span><span class="soc-arr">↗</span>
         </a>
       </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <h3>VitaSense</h3>
-          <span class="project-type">ML + Healthcare</span>
-        </div>
-        <p>
-          A cancer risk assessment and awareness web application that predicts risk levels based on symptoms and provides educational resources and doctor information across India.
-        </p>
-        <div class="project-tech">
-          <span>Python</span><span>Flask</span><span>Random Forest</span><span>Pandas</span><span>Render</span><span>scikit-learn</span>
-        </div>
-        <a href="https://vitasense.onrender.com" target="_blank">
-          View Live →
-        </a>
+    </div>
+    <div class="rv d2">
+      <div class="about-card-stack">
+        <div class="info-card"><div class="ic-lbl">Focus</div><div class="ic-val">Web Application Development · Python & Backend Engineering</div></div>
+        <div class="info-card"><div class="ic-lbl">Primary Stack</div><div class="ic-val">Python · Flask · FastAPI · Full-Stack</div></div>
+        <div class="info-card"><div class="ic-lbl">Experience</div><div class="ic-val">Building and deploying full-stack web applications</div></div>
+        <div class="info-card"><div class="ic-lbl">Location</div><div class="ic-val">Pilani, Rajasthan, India</div></div>
       </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <h3>SummarEase</h3>
-          <span class="project-type">NLP + Full-Stack Web App</span>
-        </div>
-        <p>
-          An AI-powered document summarization web application that generates concise summaries and keywords from PDFs, DOCX, and text files, with OCR support for scanned documents.
-        </p>
-        <div class="project-tech">
-          <span>Python</span><span>FastAPI</span><span>NLP</span><span>googletrans</span><span>TextRank</span><span>Tesseract OCR</span><span>Render</span>
-        </div>
-        <a href="https://summarease-f659.onrender.com" target="_blank">
-          View Live →
-        </a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <h3>PDF to Audiobook</h3>
-          <span class="project-type">Accessibility Tool</span>
-        </div>
-        <p>
-          A web application that converts PDF documents into audiobooks, allowing users to listen to or download audio versions of text content,
-          making long-form content easier to consume.
-        </p>
-        <div class="project-tech">
-          <span>Python</span><span>Streamlit</span><span>gTTS</span><span>PyPDF2</span>
-        </div>
-        <a href="https://pdf-to-audiobook-hmgectuhkhcrfjxqd5hemv.streamlit.app/" target="_blank">
-          View Live →
-        </a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">
-          <h3>ClariFi</h3>
-          <span class="project-type">Audio Processing</span>
-        </div>
-        <p>
-          A web application that removes background noise from uploaded audio and video files to improve voice clarity.
-        </p>
-        <div class="project-tech">
-          <span>Python</span><span>Flask</span><span>Noisereduce</span><span>Render</span>
-        </div>
-        <a href="https://noise-cancellation-app.onrender.com" target="_blank">
-          View Live →
-        </a>
-      </div>
-
     </div>
   </div>
 </section>
 
-<section id="certifications" class="certs">
-  <div class="certs-container">
+<!-- PROJECTS -->
+<section id="projects" class="sec">
+  <div class="sec-tag rv">02 · Work</div>
+  <h2 class="sec-h rv d1">Selected <em>projects.</em></h2>
+  <div class="proj-grid rv d2">
 
-    <h2 class="section-heading">
-      Certifications & <span>Achievements</span>
-    </h2>
-
-    <div class="certs-grid">
-
-      <div class="cert-card">
-        <div class="cert-header">
-          <h3>Smart India Hackathon (SIH)</h3>
-          <span class="cert-date">Sep 2024</span>
-        </div>
-        <p>
-          Selected participant and team lead for a Bus Scheduling System focused
-          on route optimization and operational efficiency. Led problem analysis,
-          solution design, and final presentation.
-        </p>
-        <button
-    class="view-cert-btn"
-    data-cert="certificates/SIH.jpg">
-    View Certificate
-  </button>
+    <div class="proj-card" onclick="window.open('https://zenbot-3mjb.onrender.com','_blank')">
+      <div class="proj-img">
+        <img src="images/zenbot.png" alt="ZenBot" onload="this.nextElementSibling.style.display='none'">
+        <div class="proj-img-fallback">ZenBot · Mental Wellness</div>
+        <div class="proj-pill">Live ↗</div>
       </div>
-
-      <div class="cert-card">
-        <div class="cert-header">
-          <h3>In-House Summer Internship</h3>
-          <span class="cert-date">Jun 2023</span>
-        </div>
-        <p>
-          Gained hands-on exposure to real-world development workflows, teamwork,
-          and applied problem-solving in an academic environment.
-        </p>
-        <button
-    class="view-cert-btn"
-    data-cert="certificates/In-house.jpeg">
-    View Certificate
-  </button>
+      <div class="proj-body">
+        <div class="proj-cat">Mental Wellness · Full-Stack</div>
+        <div class="proj-title">ZenBot</div>
+        <p class="proj-desc">A mental wellness application that enables users to track moods, maintain private journal entries, and gain insights into their emotional patterns over time. Built with Flask, Google OAuth, and SQLAlchemy, with secure authentication and cloud deployment on Render.</p>
+        <div class="proj-tags"><span class="ptag">Flask</span><span class="ptag">SQLAlchemy</span><span class="ptag">Google OAuth</span><span class="ptag">Python</span><span class="ptag">Render</span></div>
+        <a href="https://zenbot-3mjb.onrender.com" target="_blank" class="proj-go" onclick="event.stopPropagation()">View live ↗</a>
       </div>
-
-      <div class="cert-card">
-        <div class="cert-header">
-          <h3>Python Programming</h3>
-          <span class="cert-date">Nov 2024</span>
-        </div>
-        <p>
-          Indian Institute of Technology (IIT) Bombay. Built strong foundations
-          in Python programming, data handling, and basic visualization.
-        </p>
-        <button
-    class="view-cert-btn"
-    data-cert="certificates/Python.jpg">
-    View Certificate
-  </button>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-header">
-          <h3>C Programming</h3>
-          <span class="cert-date">Apr 2025</span>
-        </div>
-        <p>
-          IIT Bombay certification. Focused on procedural programming, logic building, memory concepts, and problem-solving fundamentals.
-        </p>
-        <button
-    class="view-cert-btn"
-    data-cert="certificates/c.jpg">
-    View Certificate
-  </button>
-  </div>
-
-  <div class="cert-card">
-        <div class="cert-header">
-          <h3>C++ Programming</h3>
-          <span class="cert-date">Apr 2025</span>
-        </div>
-        <p>
-          IIT Bombay certification. Covered object-oriented programming concepts, data structures basics, and algorithmic problem-solving.
-        </p>
-  <button
-    class="view-cert-btn"
-    data-cert="certificates/cpp.jpg">
-    View Certificate
-  </button>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-header">
-          <h3>Machine Learning Fundamentals</h3>
-          <span class="cert-date">Jul 2024</span>
-        </div>
-        <p>
-          Internshala certification focused on supervised learning basics and
-          practical ML implementation using Python.
-        </p>
-        <button
-    class="view-cert-btn"
-    data-cert="certificates/Machine learning.jpg">
-    View Certificate
-  </button>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-header">
-          <h3>Python Web Development Pro</h3>
-          <span class="cert-date">Aug 2025</span>
-        </div>
-        <p>
-          Udemy course covering full-stack web development with Flask & Django,
-          responsive UI using HTML, CSS, and Bootstrap, and real-world workflows.
-        </p>
-        <button
-    class="view-cert-btn"
-    data-cert="certificates/Muskan_Certificate.jpg">
-    View Certificate
-  </button>
-      </div>
-
-      <div class="cert-card">
-        <div class="cert-header">
-          <h3>Database & SQL</h3>
-          <span class="cert-date">Apr 2025</span>
-        </div>
-        <p>
-          Covered core database concepts, SQL queries, data retrieval, and relational database fundamentals.
-        </p>
-        <button
-    class="view-cert-btn"
-    data-cert="certificates/SQL.jpg">
-    View Certificate
-  </button>
-
-    </div>
-  </div>
-</section>
-
-<section id="skills" class="skills">
-  <div class="skills-container">
-
-    <h2 class="section-heading">
-      Skills & <span>Tech Stack</span>
-    </h2>
-
-    <div class="skills-grid">
-
-      <div class="skill-card">
-        <h3>Programming</h3>
-        <div class="skill-tags">
-          <span>Python (Primary Language)</span>
-          <span>C</span>
-          <span>C++</span>
-          <span>SQL</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h3>Web-App Development</h3>
-        <div class="skill-tags">
-          <span>Flask</span>
-          <span>FastAPI</span>
-          <span>Django (Basics)</span>
-          <span>Streamlit</span>
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span>JavaScript</span>
-          <span>REST APIs</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h3>Data Science & Machine Learning</h3>
-        <div class="skill-tags">
-          <span>Pandas</span>
-          <span>NumPy</span>
-          <span>Matplotlib</span>
-          <span>Data Analysis & Visualization</span>
-          <span>Scikit-learn</span>
-          <span>Random Forest</span>
-          <span>NLP (Basics)</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h3>Tools & Platforms</h3>
-        <div class="skill-tags">
-          <span>Git</span>
-          <span>GitHub</span>
-          <span>VS Code</span>
-          <span>Jupyter Notebook</span>
-          <span>Render (Deployment)</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h3>Databases</h3>
-        <div class="skill-tags">
-          <span>MySQL</span>
-          <span>SQLite</span>
-          <span>SQLAlchemy (ORM)</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h3>Soft Skills</h3>
-        <div class="skill-tags">
-          <span>Problem Solving</span>
-          <span>Analytical Thinking</span>
-          <span>Communication</span>
-          <span>Team Collaboration</span>
-          <span>Adaptability</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="education" class="education">
-  <div class="education-container">
-
-    <h2 class="section-heading">
-      <span>Education</span>
-    </h2>
-
-    <div class="education-grid">
-
-      <div class="edu-card edu-primary">
-        <div class="edu-header">
-          <h3>B.Tech — CSE(Data Science)</h3>
-          <span class="edu-duration">2022 – 2026</span>
-        </div>
-
-        <p class="edu-institute">
-          BK Birla Institute of Engineering and Technology, Pilani
-        </p>
-
-        <div class="edu-meta">
-          <span class="edu-highlight">CGPA: 8.90 / 10</span>
-        </div>
-      </div>
-
-      <div class="edu-card">
-        <div class="edu-header">
-          <h3>Senior Secondary</h3>
-          <span class="edu-duration">2021 – 2022</span>
-        </div>
-
-        <p class="edu-institute">Vijay Public School, Pilani</p>
-
-        <div class="edu-meta">
-          <span class="edu-highlight">Percentage: 75%</span>
-        </div>
-      </div>
-
-      <div class="edu-card">
-        <div class="edu-header">
-          <h3>Secondary Education</h3>
-          <span class="edu-duration">2019 – 2020</span>
-        </div>
-
-        <p class="edu-institute">
-          Hemant Children Academy, Pilani
-        </p>
-
-        <div class="edu-meta">
-          <span class="edu-highlight">Percentage: 76%</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="contact-container">
-
-    <h2 class="section-heading">
-      Get In <span>Touch</span>
-    </h2>
-
-    <p class="contact-subtext">
-      You can connect with me using the details below.
-    </p>
-
-    <div class="contact-grid">
-
-      <div class="contact-card">
-        <i class='bx bx-envelope contact-icon'></i>
-        <h3>Email</h3>
-        <p>
-          <a href="mailto:pooniamuskan4@gmail.com">
-            pooniamuskan4@gmail.com
-          </a>
-        </p>
-      </div>
-
-<div class="contact-card">
-  <i class='bx bx-phone contact-icon'></i>
-  <h3>Phone</h3>
-  <p>
-    <a href="tel:+918852051396">
-      +91-88520 51396
-    </a>
-  </p>
-</div>
-
-      <div class="contact-card">
-        <i class='bx bxl-linkedin-square contact-icon'></i>
-        <h3>LinkedIn</h3>
-        <p>
-          <a href="https://linkedin.com/in/muskan2004" target="_blank">
-            linkedin.com/in/muskan2004
-          </a>
-        </p>
-      </div>
-
     </div>
 
-    <div class="contact-cta">
-      <a href="#projects" class="btn primary">View Projects</a>
-      <a href="Resume-Muskan.pdf" download class="btn ghost">Download Resume</a>
+    <div class="proj-card" onclick="window.open('https://vitasense.onrender.com','_blank')">
+      <div class="proj-img">
+        <img src="images/vitasense.png" alt="VitaSense" onload="this.nextElementSibling.style.display='none'">
+        <div class="proj-img-fallback">VitaSense · Cancer Risk Assessment</div>
+        <div class="proj-pill">Live ↗</div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">Healthcare · ML · Random Forest</div>
+        <div class="proj-title">VitaSense</div>
+        <p class="proj-desc">Developed a healthcare-focused web application that assesses potential cancer risk based on user-reported symptoms using a machine learning model. The platform provides instant risk predictions, educational resources, and access to a doctor directory, making health information more accessible and actionable.</p>
+        <div class="proj-tags"><span class="ptag">scikit-learn</span><span class="ptag">Random Forest</span><span class="ptag">Flask</span><span class="ptag">Pandas</span><span class="ptag">Render</span></div>
+        <a href="https://vitasense.onrender.com" target="_blank" class="proj-go" onclick="event.stopPropagation()">View live ↗</a>
+      </div>
+    </div>
+
+    <div class="proj-card" onclick="window.open('https://summarease-f659.onrender.com','_blank')">
+      <div class="proj-img">
+        <img src="images/summarease.png" alt="SummarEase" onload="this.nextElementSibling.style.display='none'">
+        <div class="proj-img-fallback">SummarEase · Document Summarization</div>
+        <div class="proj-pill">Live ↗</div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">NLP · FastAPI · Multi-format</div>
+        <div class="proj-title">SummarEase</div>
+        <p class="proj-desc">Built an intelligent document summarization application that transforms lengthy documents into concise, readable summaries. Supports PDFs, DOCX files, scanned documents through OCR, and multilingual output, helping users quickly extract key information from large volumes of text.</p>
+        <div class="proj-tags"><span class="ptag">Python</span><span class="ptag">FastAPI</span><span class="ptag">TextRank</span><span class="ptag">googletrans</span></div>
+        <a href="https://summarease-f659.onrender.com" target="_blank" class="proj-go" onclick="event.stopPropagation()">View live ↗</a>
+      </div>
+    </div>
+
+    <div class="proj-card" onclick="window.open('https://noise-cancellation-app.onrender.com','_blank')">
+      <div class="proj-img">
+        <img src="images/clarifi.png" alt="ClariFi" onload="this.nextElementSibling.style.display='none'">
+        <div class="proj-img-fallback">ClariFi · Audio Noise Removal</div>
+        <div class="proj-pill">Live ↗</div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-cat">Audio Processing · Flask</div>
+        <div class="proj-title">ClariFi</div>
+        <p class="proj-desc">A simple yet effective audio noise cancellation application that removes background noise from audio and video files. Users can upload their files, process them, and download the cleaned versions. Built on noisereduce with a Flask wrapper, deployed on Render.</p>
+        <div class="proj-tags"><span class="ptag">Flask</span><span class="ptag">noisereduce</span><span class="ptag">Python</span><span class="ptag">Render</span></div>
+        <a href="https://noise-cancellation-app.onrender.com" target="_blank" class="proj-go" onclick="event.stopPropagation()">View live ↗</a>
+      </div>
     </div>
 
   </div>
 </section>
 
-<footer class="footer">
-  <p>
-    -- Built by <span>Muskan <3</span> --
-  </p>
+<!-- SKILLS -->
+<section id="skills" class="sec">
+  <div class="sec-tag rv">03 · Skills</div>
+  <h2 class="sec-h rv d1">Tech <em>stack.</em></h2>
+  <div class="sk-grid rv d2">
+    <div class="sk-col"><div class="sk-col-title">Programming</div><div class="sk-items"><span class="sk-item hi">Python</span><span class="sk-item hi">SQL</span><span class="sk-item">C</span><span class="sk-item">C++</span></div></div>
+    <div class="sk-col"><div class="sk-col-title">Web &amp; Backend</div><div class="sk-items"><span class="sk-item hi">Flask</span><span class="sk-item hi">FastAPI</span><span class="sk-item hi">HTML · CSS</span><span class="sk-item">Streamlit</span><span class="sk-item">Django</span><span class="sk-item">REST APIs</span></div></div>
+    <div class="sk-col"><div class="sk-col-title">ML &amp; Data</div><div class="sk-items"><span class="sk-item hi">scikit-learn</span><span class="sk-item hi">Pandas</span><span class="sk-item hi">NumPy</span><span class="sk-item">Matplotlib</span><span class="sk-item">NLP · TextRank</span><span class="sk-item">Random Forest</span></div></div>
+    <div class="sk-col"><div class="sk-col-title">Databases</div><div class="sk-items"><span class="sk-item hi">MySQL</span><span class="sk-item">SQLAlchemy ORM</span><span class="sk-item">SQLite</span></div></div>
+    <div class="sk-col"><div class="sk-col-title">Tools &amp; Deploy</div><div class="sk-items"><span class="sk-item hi">Git · GitHub</span><span class="sk-item hi">Render</span><span class="sk-item hi">VS Code</span><span class="sk-item">Jupyter</span></div></div>
+    <div class="sk-col"><div class="sk-col-title">Soft Skills</div><div class="sk-items"><span class="sk-item hi">Communication</span><span class="sk-item hi">Team Leadership</span><span class="sk-item hi">Problem Solving</span><span class="sk-item">Adaptability</span><span class="sk-item">Analytical Thinking</span></div></div>
+  </div>
+</section>
+
+<!-- CERTS -->
+<section id="certifications" class="sec">
+  <div class="sec-tag rv">04 · Certifications</div>
+  <h2 class="sec-h rv d1">Certifications &amp; <em>achievements.</em></h2>
+  <div class="cert-banner rv d2">
+    <div class="cert-banner-icon">★</div>
+    <div><div class="cb-title">Smart India Hackathon 2024 - Team Lead</div><div class="cb-desc">Led problem analysis, solution design, and final presentation for a Bus Scheduling &amp; Route Optimization system. </div></div>
+  </div>
+  <div class="cert-grid rv d3">
+ 
+    <div class="cert-card" data-cert="images/Python.jpg" data-name="Python Programming — IIT Bombay">
+      <div class="cc-thumb">
+        <img src="images/Python.jpg" alt="Python cert" onload="this.nextElementSibling.style.display='none'"/>
+        <div class="cc-thumb-fallback">Python Programming</div>
+      </div>
+      <div class="cc-body"><div class="cc-date">Nov 2024</div><div class="cc-name">Python Programming</div><div class="cc-org">IIT Bombay</div><div class="cc-view">View certificate →</div></div>
+    </div>
+ 
+    <div class="cert-card" data-cert="images/Machine learning.jpg" data-name="Machine Learning Fundamentals — Internshala">
+      <div class="cc-thumb">
+        <img src="images/Machine learning.jpg" alt="ML cert" onload="this.nextElementSibling.style.display='none'"/>
+        <div class="cc-thumb-fallback">Machine Learning</div>
+      </div>
+      <div class="cc-body"><div class="cc-date">Jul 2024</div><div class="cc-name">Machine Learning</div><div class="cc-org">Internshala</div><div class="cc-view">View certificate →</div></div>
+    </div>
+ 
+    <div class="cert-card" data-cert="images/c.jpg" data-name="C Programming — IIT Bombay">
+      <div class="cc-thumb">
+        <img src="images/c.jpg" alt="C cert" onload="this.nextElementSibling.style.display='none'"/>
+        <div class="cc-thumb-fallback">C Programming</div>
+      </div>
+      <div class="cc-body"><div class="cc-date">Apr 2025</div><div class="cc-name">C Programming</div><div class="cc-org">IIT Bombay</div><div class="cc-view">View certificate →</div></div>
+    </div>
+ 
+    <div class="cert-card" data-cert="images/c++.jpg" data-name="C++ Programming — IIT Bombay">
+      <div class="cc-thumb">
+        <img src="images/c++.jpg" alt="C++ cert" onload="this.nextElementSibling.style.display='none'"/>
+        <div class="cc-thumb-fallback">C++ Programming</div>
+      </div>
+      <div class="cc-body"><div class="cc-date">Apr 2025</div><div class="cc-name">C++ Programming</div><div class="cc-org">IIT Bombay</div><div class="cc-view">View certificate →</div></div>
+    </div>
+ 
+    <div class="cert-card" data-cert="images/SQL.jpg" data-name="Database & SQL">
+      <div class="cc-thumb">
+        <img src="images/SQL.jpg" alt="SQL cert" onload="this.nextElementSibling.style.display='none'"/>
+        <div class="cc-thumb-fallback">Database &amp; SQL</div>
+      </div>
+      <div class="cc-body"><div class="cc-date">Apr 2025</div><div class="cc-name">Database &amp; SQL</div><div class="cc-org">Great Learning</div><div class="cc-view">View certificate →</div></div>
+    </div>
+ 
+    <div class="cert-card" data-cert="images/Muskan_Certificate.jpg" data-name="Python Web Dev Pro — Udemy">
+      <div class="cc-thumb">
+        <img src="images/Muskan_Certificate.jpg" alt="Udemy cert" onload="this.nextElementSibling.style.display='none'"/>
+        <div class="cc-thumb-fallback">Python Web Development Pro</div>
+      </div>
+      <div class="cc-body"><div class="cc-date">Aug 2025</div><div class="cc-name">Python Web Development Pro</div><div class="cc-org">Udemy</div><div class="cc-view">View certificate →</div></div>
+    </div>
+ 
+    <div class="cert-card" data-cert="images/In-house.jpeg" data-name="In-House Summer Internship">
+      <div class="cc-thumb">
+        <img src="images/In-house.jpeg" alt="Internship cert" onload="this.nextElementSibling.style.display='none'"/>
+        <div class="cc-thumb-fallback">Summer Internship</div>
+      </div>
+      <div class="cc-body"><div class="cc-date">Jun 2023</div><div class="cc-name">In-House Summer Internship</div><div class="cc-org">BK Birla Institution of Engineering & Technology</div><div class="cc-view">View certificate →</div></div>
+    </div>
+ 
+    <div class="cert-card" data-cert="images/SIH.jpg" data-name="Smart India Hackathon 2024">
+      <div class="cc-thumb">
+        <img src="images/SIH.jpg" alt="SIH cert" onload="this.nextElementSibling.style.display='none'"/>
+        <div class="cc-thumb-fallback">Smart India Hackathon</div>
+      </div>
+      <div class="cc-body"><div class="cc-date">Sep 2024</div><div class="cc-name">Smart India Hackathon</div><div class="cc-org">BK Birla Institution of Engineering & Technology</div><div class="cc-view">View certificate →</div></div>
+    </div>
+ 
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="sec">
+  <div class="sec-tag rv">05 · Education</div>
+  <h2 class="sec-h rv d1">Academic <em>background.</em></h2>
+  <div class="edu-list">
+    <div class="edu-row rv d1">
+      <div class="edu-yr">2022 – 2026</div>
+      <div><div class="edu-deg">B.Tech — Computer Science (Data Science)</div><div class="edu-school">BK Birla Institute of Engineering &amp; Technology, Pilani</div><div class="edu-score">CGPA: 8.90 / 10</div></div>
+    </div>
+    <div class="edu-row rv d2">
+      <div class="edu-yr">2021 – 2022</div>
+      <div><div class="edu-deg">Senior Secondary (XII)</div><div class="edu-school">Vijay Public School, Pilani</div><div class="edu-score">75%</div></div>
+    </div>
+    <div class="edu-row rv d3">
+      <div class="edu-yr">2019 – 2020</div>
+      <div><div class="edu-deg">Secondary Education (X)</div><div class="edu-school">Hemant Children Academy, Pilani</div><div class="edu-score">76%</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="rv">
+    <h2 class="ct-h">Get in <em>touch.</em></h2>
+    <p class="ct-sub">I'm a recent Computer Science graduate who enjoys building practical software and learning new technologies. If you'd like to collaborate, discuss an opportunity, or simply connect, I'd love to hear from you.</p>
+  </div>
+  <div class="ct-links rv d1">
+    <a href="mailto:pooniamuskan4@gmail.com" class="ct-row"><span class="ct-lbl">Email</span><span class="ct-val">pooniamuskan4@gmail.com</span><span class="ct-arr">↗</span></a>
+    <a href="tel:+918852051396" class="ct-row"><span class="ct-lbl">Phone</span><span class="ct-val">+91 88520 51396</span><span class="ct-arr">↗</span></a>
+    <a href="https://linkedin.com/in/muskan2004" target="_blank" class="ct-row"><span class="ct-lbl">LinkedIn</span><span class="ct-val">linkedin.com/in/muskan2004</span><span class="ct-arr">↗</span></a>
+    </div>
+</section>
+
+<footer>
+  <div class="ft-r">-- Built by Muskan <3 --</div>
+  <div class="ft-l">👩‍💻🎀</div>
 </footer>
 
-<div class="cert-modal" id="certModal">
-  <div class="cert-modal-content">
-    <span class="cert-close">&times;</span>
-
-    <img id="certImage" alt="Certificate" />
-
-    <iframe
-      id="resumeFrame"
-      title="Resume Preview"
-      loading="lazy">
-    </iframe>
-
-    <div class="cert-modal-header">
-
-  <div class="modal-actions">
-    <a id="certDownload" download title="Download">
-      <i class='bx bx-download'></i>
-    </a>
-  </div>
-</div>
-
+<!-- CERT MODAL -->
+<div class="modal" id="certModal">
+  <div class="modal-box">
+    <div class="modal-top"><span class="modal-ttl" id="mTitle"></span><button class="modal-x" id="mClose">✕</button></div>
+    <div class="modal-img"><img id="mImg" src="" alt="Certificate"/></div>
+    <div class="modal-foot"><a id="mDl" href="#" download class="modal-dl">↓ Download</a></div>
   </div>
 </div>
 
 <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
