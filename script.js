@@ -1,133 +1,132 @@
-const roles = [
-  "Python Developer",
-  "Full-Stack Software Developer"
-];
+const cur=document.getElementById('cur'),
+      curR=document.getElementById('cur-r');
 
-let roleIndex = 0;
-let charIndex = 0;
-const typingSpeed = 80;
-const eraseSpeed = 45;
-const pauseDelay = 1600;
+let mx=0,my=0,rx=0,ry=0;
 
-document.addEventListener("DOMContentLoaded", () => {
-  
-  const typewriter = document.querySelector(".typewriter");
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("nav a");
-  const scrollIndicator = document.querySelector(".scroll-indicator");
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX;
+  my=e.clientY;
+  cur.style.left=mx+'px';
+  cur.style.top=my+'px';
+});
 
-  const modal = document.getElementById("certModal");
-  const modalImg = document.getElementById("certImage");
-  const resumeFrame = document.getElementById("resumeFrame");
-  const modalDownload = document.getElementById("certDownload");
-  const closeBtn = document.querySelector(".cert-close");
+(function raf(){
+  rx+=(mx-rx)*.11;
+  ry+=(my-ry)*.11;
+  curR.style.left=rx+'px';
+  curR.style.top=ry+'px';
+  requestAnimationFrame(raf);
+})();
 
-  const certButtons = document.querySelectorAll(".view-cert-btn");
-  const resumeBtn = document.querySelector(".view-resume-btn");
-
-  function typeText() {
-    if (!typewriter) return;
-
-    if (charIndex < roles[roleIndex].length) {
-      typewriter.textContent += roles[roleIndex].charAt(charIndex);
-      charIndex++;
-      setTimeout(typeText, typingSpeed);
-    } else {
-      setTimeout(eraseText, pauseDelay);
-    }
-  }
-
-  function eraseText() {
-    if (charIndex > 0) {
-      typewriter.textContent = roles[roleIndex].substring(0, charIndex - 1);
-      charIndex--;
-      setTimeout(eraseText, eraseSpeed);
-    } else {
-      roleIndex = (roleIndex + 1) % roles.length;
-      setTimeout(typeText, 120);
-    }
-  }
-
-  typeText();
-
-  window.addEventListener("scroll", () => {
-    let currentSection = "";
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
-      if (window.scrollY >= sectionTop) {
-        currentSection = section.id;
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${currentSection}`) {
-        link.classList.add("active");
-      }
-    });
-
-    if (scrollIndicator) {
-      scrollIndicator.style.opacity = window.scrollY > 80 ? "0" : "0.7";
-    }
+document.querySelectorAll(
+  'a,button,.proj-card,.cert-card,.soc-row,.ct-row'
+).forEach(el=>{
+  el.addEventListener('mouseenter',()=>{
+    curR.style.transform='translate(-50%,-50%) scale(1.7)';
+    curR.style.borderColor='rgba(167,139,250,.6)';
   });
 
-  certButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      const imgSrc = button.dataset.cert;
-
-      modalImg.style.display = "block";
-      resumeFrame.style.display = "none";
-      resumeFrame.src = "";
-
-      modalImg.src = imgSrc;
-      modalDownload.href = imgSrc;
-
-      modal.classList.add("active");
-      document.body.style.overflow = "hidden";
-    });
+  el.addEventListener('mouseleave',()=>{
+    curR.style.transform='translate(-50%,-50%) scale(1)';
+    curR.style.borderColor='rgba(167,139,250,.35)';
   });
+});
 
-  if (resumeBtn) {
-    resumeBtn.addEventListener("click", () => {
-      const resumeSrc = resumeBtn.dataset.resume;
+document.querySelectorAll('a[href^="#"]').forEach(a =>
+  a.addEventListener('click',e=>{
+    e.preventDefault();
 
-      modalImg.style.display = "none";
-      modalImg.src = "";
+    const t=document.querySelector(
+      a.getAttribute('href')
+    );
 
-      resumeFrame.style.display = "block";
-      resumeFrame.src = resumeSrc;
-
-      modalDownload.href = resumeSrc;
-
-      modal.classList.add("active");
-      document.body.style.overflow = "hidden";
-    });
-  }
-
-  function closeModal() {
-    modal.classList.remove("active");
-
-    modalImg.src = "";
-    resumeFrame.src = "";
-
-    modalImg.style.display = "block";
-    resumeFrame.style.display = "none";
-
-    document.body.style.overflow = "";
-  }
-
-  closeBtn.addEventListener("click", closeModal);
-
-  modal.addEventListener("mousedown", e => {
-    if (e.target === modal) {
-      closeModal();
+    if(t){
+      t.scrollIntoView({
+        behavior:'smooth'
+      });
     }
+  })
+);
+
+const scrollIndicator =
+  document.querySelector('.scroll-indicator');
+
+window.addEventListener('scroll',()=>{
+  nav.style.background =
+    window.scrollY > 40
+      ? 'rgba(15,12,26,.95)'
+      : 'rgba(15,12,26,.75)';
+
+  if(scrollIndicator){
+    scrollIndicator.style.opacity =
+      window.scrollY > 80 ? '0' : '0.7';
+  }
+});
+
+/* MOBILE NAV */
+const ham=document.getElementById('navHam'),
+      mob=document.getElementById('mob-nav'),
+      mc=document.getElementById('mobClose');
+
+ham.addEventListener('click',()=>{
+  mob.classList.toggle('open');
+});
+
+mc.addEventListener('click',()=>{
+  mob.classList.remove('open');
+});
+
+document.querySelectorAll('.mob-link').forEach(a =>
+  a.addEventListener('click',()=>{
+    mob.classList.remove('open');
+  })
+);
+
+const ro = new IntersectionObserver(
+  es => es.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('in');
+    }
+  }),
+  {
+    threshold:.08,
+    rootMargin:'0px 0px -20px 0px'
+  }
+);
+
+document.querySelectorAll('.rv')
+  .forEach(el=>ro.observe(el));
+
+/* CERTIFICATE MODAL */
+const modal  = document.getElementById('certModal'),
+      mImg   = document.getElementById('mImg'),
+      mTitle = document.getElementById('mTitle'),
+      mDl    = document.getElementById('mDl');
+
+document.querySelectorAll('.cert-card').forEach(c =>
+  c.addEventListener('click',()=>{
+    mImg.src = c.dataset.cert;
+    mTitle.textContent = c.dataset.name;
+    mDl.href = c.dataset.cert;
+    mDl.download = c.dataset.name;
+
+    modal.classList.add('open');
+  })
+);
+
+document.getElementById('mClose')
+  .addEventListener('click',()=>{
+    modal.classList.remove('open');
   });
 
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape" && modal.classList.contains("active")) {
-      closeModal();
-    }
-  });
+modal.addEventListener('click',e=>{
+  if(e.target === modal){
+    modal.classList.remove('open');
+  }
+});
+
+document.addEventListener('keydown',e=>{
+  if(e.key === 'Escape'){
+    modal.classList.remove('open');
+  }
 });
